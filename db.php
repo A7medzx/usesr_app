@@ -1,5 +1,6 @@
 <?php
-$con=new mysqli('localhost','root','','user_app');
-if(!$con){
-    die(mysqli_error($con));
+$con = new mysqli('db', 'root', 'password', 'users_app');
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
+?>
